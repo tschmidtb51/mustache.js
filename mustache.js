@@ -65,11 +65,12 @@ var entityMap = {
   "'": '&#39;',
   '/': '&#x2F;',
   '`': '&#x60;',
-  '=': '&#x3D;'
+  '=': '&#x3D;',
+  ':': '&colon;'
 };
 
 function escapeHtml (string) {
-  return String(string).replace(/[&<>"'`=\/]/g, function fromEntityMap (s) {
+  return String(string).replace(/[&<>"'`=:\/]/g, function fromEntityMap (s) {
     return entityMap[s];
   });
 }
